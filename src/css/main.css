@@ -1,4 +1,5 @@
 //only imports in this file
 
 @import 'normalize.css';
+@import 'variables.css';
 @import 'structure.css';

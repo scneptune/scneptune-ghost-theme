@@ -24,7 +24,7 @@ const webpackPlugins = [
   }),
   new webpack.NoEmitOnErrorsPlugin(),
   new webpack.optimize.CommonsChunkPlugin({
-    names: ['vendor_a', 'vendor_b'],
+    names: 'vendor',
     filename: 'js/[name].js',
     minChunks: Infinity
   }),
