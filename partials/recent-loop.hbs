@@ -1,0 +1,17 @@
+{{#foreach posts}}
+  <div class="recentcard {{post_class}}">
+  	<div class="recentcard_head">
+      {{#if image}}
+        <img class="recentcard_head__image" src="{{image}}" alt="{{title}}">
+      {{/if}}
+  		<h3 class="recentcard_head__title">
+        <a href="{{url}}" alt="{{title}}">{{{title}}}</a>
+      </h3>
+      <time class="recentcard_head__postdate" datetime="{{date format="M-d-YYYY"}}">
+        <span>{{date format="MMM DD, YYYY"}}</span>
+      </time>
+    </div>
+		<p class="recentcard__excerpt">{{excerpt words="45"}} <a href="{{url}}"> Full Post  &raquo;</a></p>
+  	{{tags prefix=" on "}}
+  </div>
+{{/foreach}}

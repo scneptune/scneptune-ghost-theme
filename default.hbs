@@ -9,9 +9,13 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="cleartype" content="on">
-
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 		<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-		<link rel="stylesheet" type="text/css" href="{{asset "css/style.min.css"}}" />
+		<!-- {{#if env}} -->
+		<link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+		<!-- {{else}} -->
+		<link rel="stylesheet" type="text/css" href="http://localhost:1111" />
+		<!-- {{/end}} -->
 
 		{{ghost_head}}
 	</head>
@@ -26,7 +30,6 @@
 		</div>
 
 		{{ghost_foot}}
-
-		<script type="text/javascript" src="{{asset "js/main.min.js"}}"></script>
+		<script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 	</body>
 </html>

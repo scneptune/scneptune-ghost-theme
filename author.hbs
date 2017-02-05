@@ -1,23 +1,25 @@
 {{!< default}}
 
 {{#author}}
-		<h1>{{name}}</h1>
+<div class="authbox">
+		<h1 class="authbox--name">{{name}}</h1>
 
 		{{#if image}}
-			<img src="{{image}}" alt="{{name}}">
+			<img class="authbox--avatar" src="{{image}}" alt="{{name}}">
 		{{/if}}
 
 		{{#if bio}}
-			<p>{{bio}}</p>
+			<p class="authbox--bio">{{bio}}</p>
 		{{/if}}
 
 		{{#if location}}
-			<span>{{location}}</span>
+			<span class="authbox--location">{{location}}</span>
 		{{/if}}
 
 		{{#if website}}
 			<a href="{{website}}">{{website}}</a>
 		{{/if}}
+		</div>
 
 		<span>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
 {{/author}}
