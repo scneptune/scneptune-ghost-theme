@@ -1,5 +1,219 @@
 //only imports in this file
 
 @import 'normalize.css';
-@import 'variables.css';
-@import 'structure.css';
+
+/* Modules */
+@import 'tachyons/_box-sizing.css';
+@import 'tachyons/_images.css';
+@import 'tachyons/_background-size.css';
+@import 'tachyons/_background-position.css';
+@import 'tachyons/_outlines.css';
+@import 'tachyons/_borders.css';
+@import 'tachyons/_border-colors.css';
+@import 'tachyons/_border-radius.css';
+@import 'tachyons/_border-style.css';
+@import 'tachyons/_border-widths.css';
+@import 'tachyons/_box-shadow.css';
+@import 'tachyons/_code.css';
+@import 'tachyons/_coordinates.css';
+@import 'tachyons/_clears.css';
+@import 'tachyons/_display.css';
+@import 'tachyons/_flexbox.css';
+@import 'tachyons/_floats.css';
+@import 'tachyons/_font-family.css';
+@import 'tachyons/_font-style.css';
+@import 'tachyons/_font-weight.css';
+@import 'tachyons/_forms.css';
+@import 'tachyons/_heights.css';
+@import 'tachyons/_letter-spacing.css';
+@import 'tachyons/_line-height.css';
+@import 'tachyons/_links.css';
+@import 'tachyons/_lists.css';
+@import 'tachyons/_max-widths.css';
+@import 'tachyons/_widths.css';
+@import 'tachyons/_overflow.css';
+@import 'tachyons/_position.css';
+@import 'tachyons/_opacity.css';
+@import 'tachyons/_rotations.css';
+@import 'tachyons/_skins.css';
+@import 'tachyons/_skins-pseudo.css';
+@import 'tachyons/_spacing.css';
+@import 'tachyons/_negative-margins.css';
+@import 'tachyons/_tables.css';
+@import 'tachyons/_text-decoration.css';
+@import 'tachyons/_text-align.css';
+@import 'tachyons/_text-transform.css';
+@import 'tachyons/_type-scale.css';
+@import 'tachyons/_typography.css';
+@import 'tachyons/_utilities.css';
+@import 'tachyons/_visibility.css';
+@import 'tachyons/_white-space.css';
+@import 'tachyons/_vertical-align.css';
+@import 'tachyons/_hovers.css';
+@import 'tachyons/_z-index.css';
+@import 'tachyons/_nested.css';
+@import 'tachyons/_styles.css';
+
+@import 'tachyons/_colors.css';
+@import 'tachyons/_media-queries.css';
+
+/* Debugging */
+@import 'tachyons/_debug-children.css';
+@import 'tachyons/_debug-grid.css';
+
+
+/* Variables loosely defined */
+body {
+  @extend .noto;
+  @extend .normal;
+  @extend .lh-solid;
+  background-color: #f2f2f2;
+}
+
+.container {
+  @extend .ph3-ns;
+  @extend .center;
+  @extend .mw8;
+  @extend .pv4;
+  @extend .ph4-ns;
+  @extend .ph3;
+  @extend .cf;
+}
+
+.landing {
+  &_intro {
+    background-color: #5d98b1;
+    &__left, &__right  {
+      @extend .fl;
+      @extend .w-50-ns;
+      @extend .w-100;
+      @extend .pa2;
+
+    }
+    &__left--heading {
+      @extend .measure;
+      @extend .f3;
+    }
+    &__right--image {
+    }
+  }
+  &_profile {
+    &__left {
+      @extend .fl;
+      @extend .w-40-ns;
+      @extend .w-100;
+    }
+    &__left--name {
+      @extend .f4;
+      @extend .lh-title;
+      @extend .mb2;
+      @extend .center;
+      @extend .tc;
+      @extend .tl-ns;
+    }
+    &__left--avatar {
+      @extend .w-100;
+      @extend .center;
+      @extend .tc;
+    }
+    &__left--bio {
+      @extend .measure-narrow;
+      @extend .f6;
+      @extend .lh-copy;
+      @extend .tl-ns;
+      margin: 1.5rem auto;
+      @media (--breakpoint-not-small) {
+        margin: 1.5rem 0;
+      }
+    }
+    &__right {
+      @extend .fr;
+      @extend .w-50-ns;
+      @extend .w-100;
+      overflow: hidden;
+    }
+    &__right--abilitytable {
+      @extend .dt;
+      @extend .w-90;
+      @extend .w-100-ns;
+      @extend .bb;
+      @extend .pb2;
+      @extend .mt2;
+      @extend .mh2;
+      @extend .mh0-ns;
+    }
+    &__right--abilityicon {
+      @extend .dtc;
+      @extend .w2;
+      @extend .w3-ns;
+      @extend .v-mid;
+      /*@extend*/
+    }
+    &__right--abilitytext {
+      /*@extend*/
+       @extend .f6;
+       @extend .f5-ns;
+       @extend .lh-title;
+       @extend .mt0;
+       @extend .mb0;
+
+    }
+    &__right--abilitydesc {
+      @extend .measure-narrow;
+      @extend .dtc;
+      @extend .v-mid;
+      @extend .pl2;
+    }
+
+  }
+  &_timeline {
+    background-color: #182e37;
+
+  }
+  &_socialfeed {
+  }
+  &_recentposts{
+    background-color: #5d98b1;
+  }
+}
+
+.footer{
+  &_contactcard {
+    &__name {
+      font-size: 10px;
+    }
+    &__name--top {
+      font-size: 11px;
+    }
+    &__occupation {
+
+    }
+    &_socials {
+
+    }
+    &_socials--list-link {
+
+    }
+  }
+  &_contactphysical {
+
+  }
+}
+
+.recentcard {
+  &_head {
+    &__image{
+
+    }
+    &__title {
+
+    }
+    &__postdate {
+
+    }
+  }
+
+  &__excerpt {
+
+  }
+}
