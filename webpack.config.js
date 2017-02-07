@@ -10,12 +10,10 @@ const isProduction = nodeEnv === 'production';
 
 const compiledCss = new ExtractTextPlugin({
   filename: '/css/[name].css',
-  disable:false,
   allChunks: true
 })
 
 const webpackPlugins = [
-
   new webpack.NamedModulesPlugin(),
   new webpack.DefinePlugin({
     'process.env': {
@@ -23,11 +21,6 @@ const webpackPlugins = [
     }
   }),
   new webpack.NoEmitOnErrorsPlugin(),
-  new webpack.optimize.CommonsChunkPlugin({
-    names: 'vendor',
-    filename: 'js/[name].js',
-    minChunks: Infinity
-  }),
   new webpack.LoaderOptionsPlugin({
     debug: true,
     options: {
@@ -43,7 +36,7 @@ const webpackPlugins = [
       context: path.join(__dirname, './src/'),
     },
   }),
-
+  compiledCss
 ]
 
 if (isProduction) {
@@ -64,8 +57,7 @@ if (isProduction) {
       output: {
         comments: true
       }
-    }),
-    compiledCss
+    })
   )
 } else  {
   webpackPlugins.push(
@@ -75,24 +67,12 @@ if (isProduction) {
 }
 
 module.exports = {
-  devtool: isProduction ? 'eval' : 'source-map',
+  devtool: 'source-map',
   context: path.resolve(__dirname, './src/'),
-  entry: ['./js/main.js',
-     './css/main.css',
-    // {
-    //   vendor_a: [
-    //     'babel-polyfill',
-    //     'redux-thunk',
-    //     'redux',
-    //   ]
-    // },
-    // {
-    //   vendor_b: [
-    //     'react',
-    //     'react-dom'
-    //   ]
-    // }
-  ],
+  entry: {
+    application: './js/main.js',
+    main: './css/main.css',
+  },
   output: {
     path: path.resolve(__dirname, './assets/'),
     publicPath: '/',
@@ -116,38 +96,23 @@ module.exports = {
         use: 'file-loader?name=/image/[name].[ext]'
       },
       {
-        test: /\.css$/,
+        test: /\.(precss|css)$/,
         exclude: /node_modules/,
-        use:  isProduction ? ExtractTextPlugin.extract({
+        use: compiledCss.extract({
           fallback: 'style-loader',
-          use: 'css-loader?modules=false&importLoaders=1!postcss-loader?syntax=postcss-scss',
-        }) : ['style-loader', 'css-loader?modules=false&importLoaders=1!postcss-loader?syntax=postcss-scss'],
+          use: 'css-loader?modules=false&import=true&importLoaders=1!postcss-loader?syntax=postcss-scss&sourceMap=inline',
+        })
       }
     ]
   },
   plugins: webpackPlugins,
   devServer: {
     historyApiFallback: true,
-    contentBase: (isProduction ? path.join(__dirname, './public/') : path.join(__dirname, './src/')),
-    publicPath: '/js/',
+    contentBase: path.join(__dirname, './assets/'),
     port: 1111,
-    compress: isProduction,
-    inline: !isProduction,
-    hot: !isProduction,
+    compress: false,
+    inline: true,
+    hot: true,
     host: '0.0.0.0',
-    stats: {
-      assets: true,
-      children: false,
-      chunks: true,
-      hash: false,
-      modules: false,
-      publicPath: false,
-      timings: true,
-      version: false,
-      warnings: true,
-      colors: {
-        green: '\u001b[32m'
-      }
-    }
   }
 }

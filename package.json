@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev-build": "NODE_ENV=\"development\" webpack-dashboard -t \"SCNEPTUNE BUILD SYSTEM\" -- webpack-dev-server",
+    "dev-build": "NODE_ENV=\"development\" webpack-dashboard -t \"SCNEPTUNE BUILD SYSTEM\" -- webpack-dev-server --inline --hot",
     "prod-build": "NODE_ENV=\"production\" webpack"
   },
   "dependencies": {
