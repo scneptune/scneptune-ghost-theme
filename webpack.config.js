@@ -70,7 +70,7 @@ module.exports = {
   devtool: 'source-map',
   context: path.resolve(__dirname, './src/'),
   entry: {
-    application: './js/main.js',
+    application: './js/application.js',
     main: './css/main.css',
   },
   output: {
