@@ -1,6 +1,11 @@
-<ul role="navigation">
-	{{#foreach navigation}}
-	<li role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-	{{/foreach}}
-</ul>
-<!-- <a href="{{@blog.url}}/rss/">Subscribe</a> -->
+<nav role="navigation" class="menu fixed top-0 right-0">
+	<ul class="menu-items pl0 list">
+		{{#foreach navigation}}
+			<li class="dib pa2 mr2 fw7" role="presentation">
+				<a href="{{url absolute="true"}}">
+					{{label}}
+				</a>
+			</li>
+		{{/foreach}}
+	</ul>
+</nav>

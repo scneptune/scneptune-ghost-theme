@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>{{meta_description}}</title>
+		<title>{{meta_title}}</title>
 		<meta name="description" content="{{meta_description}}">
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
@@ -15,20 +15,22 @@
 		<link rel="stylesheet" type="text/css" href="http://localhost:1111/css/main.css" />
 		{{ghost_head}}
 	</head>
-	<body class="{{body_class}}">
+	<body class="{{body_class}} noto normal lh-solid bg-color">
+		<div class="page-wrap">
+				{{navigation}}
+			<main role="main" class="z-0">
+					{{> site-head}}
 
-		{{> site-head}}
+					{{{body}}}
 
-		{{navigation}}
+					{{ghost_foot}}
 
-		<div role="main">
-			{{{body}}}
+					{{> site-footer}}
+			</main>
+			<script type="text/javascript" src="http://localhost:1111/js/main.js"></script>
+			<script type="text/javascript" src="http://localhost:1111/js/application.js"></script>
+			<!-- <script type="text/javascript" src="{{asset "js/application.js"}}"></script>
+			<script type="text/javascript" src="{{asset "js/main.js"}}"></script> -->
 		</div>
-
-		{{ghost_foot}}
-		<script type="text/javascript" src="http://localhost:1111/js/main.js"></script>
-		<!-- <script type="text/javascript" src="http://localhost:1111/js/vendor.js"></script> -->
-		<!-- <script type="text/javascript" src="{{asset "js/vendor.js"}}"></script>
-		<script type="text/javascript" src="{{asset "js/main.js"}}"></script> -->
 	</body>
 </html>
