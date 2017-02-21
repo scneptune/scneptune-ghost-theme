@@ -1,12 +1,4 @@
-{{#if @blog.cover}}
-	<img src="{{@blog.cover}}" alt="">
-{{/if}}
-
-{{#if @blog.logo}}
-	<a href="{{@blog.url}}">
-		<img src="{{@blog.logo}}" alt="{{@blog.title}}">
-	</a>
-{{/if}}
-
-<h1>{{@blog.title}}</h1>
-<p>{{@blog.description}}</p>
+<div class="fl center w-80 ph4-ns ph3 cf">
+	<h1 class="h1 noto fw6 fc-alternate">{{@blog.title}}</h1>
+	<!-- <p class="noto fw-2 f6">{{@blog.description}}</p> -->
+</div>
