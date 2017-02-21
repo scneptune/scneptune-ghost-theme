@@ -1,0 +1,184 @@
+.fa {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.fa-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.fa-music {
+  width: 0.8571428571428571em;
+}
+
+.fa-search {
+  width: 0.9285714285714285em;
+}
+
+.fa-user {
+  width: 0.7142857142857142em;
+}
+
+.fa-close {
+  width: 0.7857142857142857em;
+}
+
+.fa-home {
+  width: 0.9285714285714285em;
+}
+
+.fa-headphones {
+  width: 0.9285714285714285em;
+}
+
+.fa-tag {
+  width: 0.8454285714285714em;
+}
+
+.fa-chevron-left {
+  width: 0.75em;
+}
+
+.fa-chevron-right {
+  width: 0.6785714285714285em;
+}
+
+.fa-plus-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-minus-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-times-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-check-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-question-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-info-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-exclamation-circle {
+  width: 0.8571428571428571em;
+}
+
+.fa-linkedin-square {
+  width: 0.8571428571428571em;
+}
+
+.fa-twitter {
+  width: 0.9285714285714285em;
+}
+
+.fa-facebook {
+  width: 0.5881428571428571em;
+}
+
+.fa-github {
+  width: 0.8571428571428571em;
+}
+
+.fa-group {
+  width: 1.0714285714285714em;
+}
+
+.fa-bars {
+  width: 0.8571428571428571em;
+}
+
+.fa-magic {
+  width: 0.9436428571428571em;
+}
+
+.fa-google-plus {
+  width: 1.2857142857142856em;
+}
+
+.fa-linkedin {
+  width: 0.8571428571428571em;
+}
+
+.fa-desktop {
+  width: 1.0714285714285714em;
+}
+
+.fa-laptop {
+  width: 1.0714285714285714em;
+}
+
+.fa-tablet {
+  width: 0.6428571428571428em;
+}
+
+.fa-mobile {
+  width: 0.42857142857142855em;
+}
+
+.fa-code-fork {
+  width: 0.5714285714285714em;
+}
+
+.fa-html5 {
+  width: 0.7857142857142857em;
+}
+
+.fa-instagram {
+  width: 0.8571428571428571em;
+}
+
+.fa-graduation-cap {
+  width: 1.2857142857142856em;
+}
+
+.fa-cubes {
+  width: 1.2142857142857142em;
+}
+
+.fa-paper-plane {
+  width: 1.0011428571428571em;
+}
+
+.fa-newspaper-o {
+  width: 1.1428571428571428em;
+}
+
+.fa-at {
+  width: 0.8571428571428571em;
+}
+
+.fa-bicycle {
+  width: 1.2857142857142856em;
+}
+
+.fa-facebook-official {
+  width: 0.8571428571428571em;
+}
+
+.fa-television {
+  width: 1.0714285714285714em;
+}
+
+.fa-address-book-o {
+  width: 0.9285714285714285em;
+}
+
+.fa-address-card-o {
+  width: 1.1428571428571428em;
+}
