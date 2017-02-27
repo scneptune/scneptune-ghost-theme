@@ -1,0 +1,43 @@
+<article class="{{post_class}} ">
+  <header class="cover bg-left bg-center-l noto" style="background-image: url({{image}});">
+    <div class="mw9 center pa5 pt6-ns ph7-l">
+      <time class="f6 mb2 dib ttu tracked">
+        <small>{{date format="DD MMMM YYYY"}}</small>
+      </time>
+      <h1 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+        <span class="bg-black-90 lh-copy white pa1 tracked-tight">
+          {{title}}
+        </span>
+      </h1>
+      <h4 class="f3 fw1 serif i"></h4>
+      {{#author}}
+        <h5 class="f6 ttu tracked fc-primary">By
+          <a class="fc-timeline-link fc-primary link"	href="{{url}}">{{name}}</a>
+        </h5>
+      {{/author}}
+    </div>
+  </header>
+  <div class="pa4 ph7-l serif mw9-l center">
+    <div class="fc-primary f5 f4-ns lh-copy measure serif">
+      {{content}}
+    </div>
+
+
+    <!-- {{#author}}
+
+
+      <a href="{{url}}">{{name}}</a>
+
+      {{#if bio}}
+        <p>{{bio}}</p>
+      {{/if}}
+
+      <p>Read <a href="{{url}}">more posts</a> by {{name}}.</p>
+
+      {{#if location}}
+        <span>{{location}}</span>
+      {{/if}}
+
+    {{/author}} -->
+  </div>
+</article>

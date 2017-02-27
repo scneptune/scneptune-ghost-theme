@@ -1,0 +1,34 @@
+<article class="{{post_class}} cf ph3 ph5-ns pv5">
+  <header class="fn fl-ns w-50-ns pr4-ns">
+    <h1 class="mb3 mt0 lh-title">{{title}}</h1>
+    <time class="f6 mb2 dib ttu tracked">
+      <small>{{date format="DD MMMM YYYY"}}</small>
+    </time>
+    {{#author}}
+      <h5 class="f6 ttu tracked black-80">By
+        <a class="fc-primary fc-timeline-link link"	href="{{url}}">{{name}}</a>
+      </h5>
+    {{/author}}
+  </header>
+  <div class="fn fl-ns w-50-ns">
+    <div class="lh-copy serif measure mt4 mt0-ns">
+      {{content}}
+    </div>
+    <!-- {{#author}}
+
+
+      <a href="{{url}}">{{name}}</a>
+
+      {{#if bio}}
+        <p>{{bio}}</p>
+      {{/if}}
+
+      <p>Read <a href="{{url}}">more posts</a> by {{name}}.</p>
+
+      {{#if location}}
+        <span>{{location}}</span>
+      {{/if}}
+
+    {{/author}} -->
+  </div>
+</article>
