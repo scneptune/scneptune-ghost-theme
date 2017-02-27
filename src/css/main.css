@@ -1,7 +1,7 @@
 //only imports in this file
 
 @import 'normalize.css';
-
+@import '_font-awesome.css';
 /* Modules */
 @import 'tachyons/_box-sizing.css';
 @import 'tachyons/_images.css';
@@ -62,158 +62,80 @@
 @import 'tachyons/_debug-grid.css';
 
 
-/* Variables loosely defined */
-body {
-  @extend .noto;
-  @extend .normal;
-  @extend .lh-solid;
-  background-color: #f2f2f2;
+.brand-primary {
+  background: #ffd740;
 }
 
-.container {
-  @extend .ph3-ns;
-  @extend .center;
-  @extend .mw8;
-  @extend .pv4;
-  @extend .ph4-ns;
-  @extend .ph3;
-  @extend .cf;
+
+
+.brand-secondary {
+  background: #263238;
 }
 
-.landing {
-  &_intro {
-    background-color: #5d98b1;
-    &__left, &__right  {
-      @extend .fl;
-      @extend .w-50-ns;
-      @extend .w-100;
-      @extend .pa2;
-
-    }
-    &__left--heading {
-      @extend .measure;
-      @extend .f3;
-    }
-    &__right--image {
-    }
-  }
-  &_profile {
-    &__left {
-      @extend .fl;
-      @extend .w-40-ns;
-      @extend .w-100;
-    }
-    &__left--name {
-      @extend .f4;
-      @extend .lh-title;
-      @extend .mb2;
-      @extend .center;
-      @extend .tc;
-      @extend .tl-ns;
-    }
-    &__left--avatar {
-      @extend .w-100;
-      @extend .center;
-      @extend .tc;
-    }
-    &__left--bio {
-      @extend .measure-narrow;
-      @extend .f6;
-      @extend .lh-copy;
-      @extend .tl-ns;
-      margin: 1.5rem auto;
-      @media (--breakpoint-not-small) {
-        margin: 1.5rem 0;
-      }
-    }
-    &__right {
-      @extend .fr;
-      @extend .w-50-ns;
-      @extend .w-100;
-      overflow: hidden;
-    }
-    &__right--abilitytable {
-      @extend .dt;
-      @extend .w-90;
-      @extend .w-100-ns;
-      @extend .bb;
-      @extend .pb2;
-      @extend .mt2;
-      @extend .mh2;
-      @extend .mh0-ns;
-    }
-    &__right--abilityicon {
-      @extend .dtc;
-      @extend .w2;
-      @extend .w3-ns;
-      @extend .v-mid;
-      /*@extend*/
-    }
-    &__right--abilitytext {
-      /*@extend*/
-       @extend .f6;
-       @extend .f5-ns;
-       @extend .lh-title;
-       @extend .mt0;
-       @extend .mb0;
-
-    }
-    &__right--abilitydesc {
-      @extend .measure-narrow;
-      @extend .dtc;
-      @extend .v-mid;
-      @extend .pl2;
-    }
-
-  }
-  &_timeline {
-    background-color: #182e37;
-
-  }
-  &_socialfeed {
-  }
-  &_recentposts{
-    background-color: #5d98b1;
-  }
+.brand-secondary-hightlight {
+  background: #546e7a;
 }
 
-.footer{
-  &_contactcard {
-    &__name {
-      font-size: 10px;
-    }
-    &__name--top {
-      font-size: 11px;
-    }
-    &__occupation {
-
-    }
-    &_socials {
-
-    }
-    &_socials--list-link {
-
-    }
-  }
-  &_contactphysical {
-
-  }
+.bg-color {
+  background: #e5e5e5;
 }
 
-.recentcard {
-  &_head {
-    &__image{
+.card-contrast-color {
+  background: #f4f3f4;
+}
 
-    }
-    &__title {
+.fc-primary {
+ color: #242424;
+}
 
-    }
-    &__postdate {
+.fc-brand-primary {
+  color: #ffd740;
+}
 
-    }
-  }
+.fc-brand-highlight {
+  color: #ffab00;
+}
 
-  &__excerpt {
+.fc-alternate {
+  color: #f3f3f3;
+}
 
-  }
+.fc-timeline {
+  color: #697f8a;
+}
+
+.fc-timeline path {
+  fill: #697f8a;
+}
+
+.fc-timeline-link {
+  cursor: pointer;
+}
+
+.reset-focus-ring:focus, .reset-focus-ring {
+  outline: none;
+}
+
+.fc-timeline-link:hover,
+.fc-timeline-link:active,
+.fc-timeline-link:hover path,
+.fc-timeline-link:active path {
+
+  fill: #3f515b;
+  color: #3f515b;
+  font-weight: 600;
+}
+
+.sr-only {
+  visibility: hidden;
+  display: none;
+}
+
+.timeline-line {
+  width: 1rem;
+  height: 1rem;
+}
+
+.landing_intro {
+
 }
