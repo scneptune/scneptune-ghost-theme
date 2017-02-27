@@ -1,49 +1,31 @@
 {{!< default}}
 
 {{#post}}
-	<div class="{{post_class}}">
-		<h1>{{title}}</h1>
-		<span>{{date format="DD MMMM YYYY"}}</span>
-		{{tags prefix=" on "}}
+	{{#has tag="work"}}
+		{{> work-post}}
+	{{else}}
+		{{#featured}}
+			{{> feature-post}}
+		{{else}}
+			{{> standard-post}}
+		{{/featured}}
+	{{/has}}
 
-		{{content}}
-
-		{{#author}}
-			{{#if image}}
-				<img src="{{image}}" alt="{{name}}">
-			{{/if}}
-
-			<a href="{{url}}">{{name}}</a>
-
-			{{#if bio}}
-				<p>{{bio}}</p>
-			{{/if}}
-
-			<p>Read <a href="{{url}}">more posts</a> by {{name}}.</p>
-
-			{{#if location}}
-				<span>{{location}}</span>
-			{{/if}}
-
-			{{#if website}}
-				<a href="{{website}}">{{website}}</a>
-			{{/if}}
-		{{/author}}
+	<div class="db w-100">
+		<hr />
+		<div class="cf ph3 ph5-ns pv5">
+			<a class="dib br3 pv2 ph3 no-underline brand-secondary-hightlight fc-alternate  fc-timeline-link" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;via=scneptune&amp;url={{url absolute="true"}}"
+				onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+				<svg class="fa fa-twitter v-mid w1 h1">
+					<use xlink:href="{{asset "img/socials.svg"}}#twitter"></use>
+				</svg>
+				<span class="f4 fw6 v-mid h1"> Tweet About This Article</span>
+			</a>
+		</div>
+		<div>
+			{{> next-post}}
+			{{> previous-post}}
+		</div>
 	</div>
 
-	<a href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-		onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-		<span>Twitter</span>
-	</a>
-	<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-		onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-		<span>Facebook</span>
-	</a>
-	<a href="https://plus.google.com/share?url={{url absolute="true"}}"
-		onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-		<span>Google&plus;</span>
-	</a>
-
-	{{> next-post}}
-	{{> previous-post}}
 {{/post}}

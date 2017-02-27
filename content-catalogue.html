@@ -1,0 +1,74 @@
+<div>
+  <p>
+    <h1>Case Study; Awesomeness TV Content Catalogue
+  </p>
+
+  <p class="lead ">
+    AwesomenessTV reaches millions of Gen Z teenagers around the world. Founded on the internet, for the internet age, AwesomenessTV's brand speaks to a new generation of media consumers. When I was brought on to the company in early October of 2015, the company had just begun to launch it's first engineering product internally to the company, the Talent Database. Talent Database was viewed as cultural shift in a company that focused primarily on video production and distribution, to one that could also create industry leading internal tech as well.
+  </p>
+  <p>
+    Impressed with the engineering team's effort with Talent Database, the
+    head of international digital distribution sought a solution to an
+    outdated and unresponsive vendor software that was used to showcase
+    Awesomeness's content for tradeshows and network deals. Enter the Content-Catalogue.
+  </p>
+  <p>
+    The Content-Catalogue linked together two parts of AwesomenessTV that until this point had been primarily communicating needs over spreadsheets. Distribution created internal spreadsheets to figure out who was pitching what client which shows (an unsustainable and time consuming flow). In turn, production only had rough estimates of which video files were part of which canonical show. By having a gated web portal which clients were able to view content and reference shows, the engineering team I was part of created a synergy with clients that was key to building out AwesomenessTV's content success in 2016.
+  </p>
+
+  <p>
+    Content Catalogue premiered just in time the 2016 MiP new media conference in Cannes, France. Over 100+ new sales contacts were made durring the course of the conference, which watched an average of 20 minutes of content a piece. The most important win for Awesomeness was the acquistion of a new 20 million dollar contract with Europe's ITV network all due in part to the ease and availibilty of the Content-Catalogue system.
+  </p>
+  
+
+  <p>
+    Objectives
+  </p>
+
+  <ul>
+    <li>
+      Connect production channels with international distribution and sales
+    </li>
+    <li>
+      Showcase diverse genre's of content across the three different AwesomenessTV in-house brands
+    </li>
+    <li>
+      Allow Distribution to create potential client accounts on the fly and track viewing habits for future sales.
+    </li>
+    <li>
+      Establish AwesomenessTV's distribution's legitimacy in the OTT (Over The Top) space to Content Buyers like Hulu, Netflix and international television channels like ITV, Endemol, DHX.
+    </li>
+  </ul>
+
+  <p>
+    Methods
+  </p>
+
+  <ul>
+    <li> Built on a Node/Handlebars/Express client-side stack and a Rails/Postgres/Redis api-server stack</li>
+    <li>
+      Itegrated Mixpanel Analytics user tracking and created a history dashboard to inform distrubution partners of potential leads
+    </li>
+    <li>
+      Serverside templates in Handlebars were reused on clientside in a ajax template loading library, which manages page level data interactions with redux.
+    </li>
+    <li></li>
+  </ul>
+
+  <p>
+  Challenges
+  </p>
+
+  <ul>
+    <li>
+      User authentication through out the app was handled through cookie tracking, as the express client did not connect to a database store user sessions, all cookies had to be passed as Javascript Web Tokens
+    </li>
+    <li>
+      Javascript used everywhere in the Node application allowed developers to reuse a good deal of templating logic, but also required a good deal of foresight in passing data to the client side. This was solved by implementing a redux and handlebars flow.
+    </li>
+    <li>
+      Because most of the clients that the Catalogue serves are international, it was imperative that video streaming and page functionally were highly responsive. Extensive device and user testing was done to promote
+    </li>
+  <ul>
+
+</di>
