@@ -89,9 +89,11 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-pre {
+pre, code {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  overflow: scroll;
+  max-width: 34em;
 }
 
 /* Text-level semantics

@@ -1,6 +1,6 @@
 //only imports in this file
 
-@import 'normalize.css';
+@import 'tachyons/_normalize.css';
 @import '_font-awesome.css';
 /* Modules */
 @import 'tachyons/_box-sizing.css';
@@ -119,8 +119,8 @@
 .fc-timeline-link:hover,
 .fc-timeline-link:active,
 .fc-timeline-link:hover path,
-.fc-timeline-link:active path {
-
+.fc-timeline-link:active path,
+.fc-timeline.active {
   fill: #3f515b;
   color: #3f515b;
   font-weight: 600;
