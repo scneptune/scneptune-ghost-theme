@@ -11,20 +11,43 @@
 		{{/featured}}
 	{{/has}}
 
-	<div class="db w-100">
+	<div class="db w-100 cf relative bg-color">
 		<hr />
-		<div class="cf ph3 ph5-ns pv5">
-			<a class="dib br3 pv2 ph3 no-underline brand-secondary-hightlight fc-alternate  fc-timeline-link" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;via=scneptune&amp;url={{url absolute="true"}}"
+		<div class="cf ph3 ph5-ns pv5 db flex-l">
+			<div class="pv2 pv0-l w-100 w-third-l">
+				{{#next_post}}
+					<div class="card-contrast-color pa3 mh3">
+						<a class="db w-100 no-underline fc-timeline" href="{{url}}">
+							<h2>{{title}}</h2>
+						</a>
+						<p class="f6 fw4 lh-copy">{{excerpt words="20"}}&hellip;</p>
+					</div>
+				{{else}}
+					<div class="db w-100"></div>
+				{{/next_post}}
+			</div>
+			<div class="pv2 pv0-l w-100 w-third-l">
+				<a class="db br3 pv2 ph3 mh3 no-underline flex flex-column justify-center items-center brand-secondary-hightlight fc-alternate fc-timeline-link"
+				href="https://twitter.com/intent/tweet?text={{encode title}}&amp;via=scneptune&amp;url={{url absolute="true"}}"
 				onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-				<svg class="fa fa-twitter v-mid w1 h1">
-					<use xlink:href="{{asset "img/socials.svg"}}#twitter"></use>
-				</svg>
-				<span class="f4 fw6 v-mid h1"> Tweet About This Article</span>
-			</a>
-		</div>
-		<div>
-			{{> next-post}}
-			{{> previous-post}}
+					<svg class="fa fa-twitter tc w2 h2 ">
+						<use xlink:href="{{asset "img/socials.svg"}}#twitter"></use>
+					</svg>
+					<p class="f4 fw6 tc"> Tweet About This Article</p>
+				</a>
+			</div>
+			<div class="pv2 pv0-l w-100 w-third-l">
+				{{#prev_post}}
+					<div class="card-contrast-color pa3 mh3">
+						<a class="db w-100 no-underline fc-timeline" href="{{url}}">
+							<h2>{{title}}</h2>
+						</a>
+						<p class="f6 fw4 lh-copy">{{excerpt words="20"}}&hellip;</p>
+					</div>
+				{{else}}
+				<div class="db w-100"></div>
+				{{/prev_post}}
+			</div>
 		</div>
 	</div>
 
