@@ -61,7 +61,6 @@ if (isProduction) {
   )
 } else  {
   webpackPlugins.push(
-    new DashboardPlugin(),
     new webpack.HotModuleReplacementPlugin()
   )
 }
@@ -69,6 +68,7 @@ if (isProduction) {
 module.exports = {
   devtool: 'source-map',
   context: path.resolve(__dirname, './src/'),
+  watch: !isProduction,
   entry: {
     application: './js/application.js',
     main: './css/main.css',
@@ -105,14 +105,5 @@ module.exports = {
       }
     ]
   },
-  plugins: webpackPlugins,
-  devServer: {
-    historyApiFallback: true,
-    contentBase: path.join(__dirname, './assets/'),
-    port: 1111,
-    compress: false,
-    inline: true,
-    hot: true,
-    host: '0.0.0.0',
-  }
+  plugins: webpackPlugins
 }

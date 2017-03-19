@@ -1,5 +1,4 @@
-import { lory } from 'lory.js'
-
+import { lory } from 'lory.js';
 (function () {
   document.addEventListener('DOMContentLoaded', () => {
     var slider = document.querySelector('.timeline_slider');
