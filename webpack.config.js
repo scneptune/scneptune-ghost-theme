@@ -59,30 +59,26 @@ if (isProduction) {
       }
     })
   )
-} else  {
-  webpackPlugins.push(
-    new webpack.HotModuleReplacementPlugin()
-  )
 }
 
 module.exports = {
   devtool: 'source-map',
-  context: path.resolve(__dirname, './src/'),
+  context: path.resolve(__dirname, 'src'),
   watch: !isProduction,
   entry: {
-    application: './js/application.js',
-    main: './css/main.css',
+    application: path.resolve(__dirname, 'src/js/application.js'),
+    main: path.resolve(__dirname, 'src/css/main.css'),
   },
   output: {
-    path: path.resolve(__dirname, './assets/'),
+    path: path.resolve(__dirname, 'assets'),
     publicPath: '/',
-    filename: '/js/[name].js',
+    filename: '[name].js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
-      path.resolve(__dirname, './src/js'),
+      path.resolve(__dirname, 'src/js'),
     ],
   },
   module: {
