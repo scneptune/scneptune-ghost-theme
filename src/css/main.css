@@ -136,6 +136,31 @@
   height: 1rem;
 }
 
-.landing_intro {
-
+.heading-line {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 16px;
+  text-decoration: none;
+}
+.heading-line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -25%;
+  bottom: 0;
+  height: 4px;
+  width: 110%;
+  transition: right .5s ease, background .25s ease, width .5s ease;
+  background: var(--light-gray);
+}
+.heading-line:hover::after{
+  right: 0;
+  width: 100%;
+  background: #ffd740;
+}
+.heading-line-alt::after {
+  background: var(--light-gray);
+}
+.heading-line-alt:hover::after {
+  background: var(--black);
 }

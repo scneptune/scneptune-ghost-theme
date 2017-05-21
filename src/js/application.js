@@ -1,7 +1,9 @@
 import { lory } from 'lory.js';
-(function () {
-  document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  document.addEventListener('DOMContentLoaded', (e) => {
+    console.log('hey');
     var slider = document.querySelector('.timeline_slider');
+    console.log(slider);
     if (slider) {
       let timelineControls = Array.prototype.filter.call(
         document.querySelector('.timeline_controls').children,
@@ -66,6 +68,7 @@ import { lory } from 'lory.js';
         enableMouseEvents: true
       })
     window.timelineSlider = timelineSlider;
+
     }
   })
 })()
