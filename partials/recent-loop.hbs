@@ -3,7 +3,7 @@
     {{#current_post}}
       {{#featured}}
         <article class="recentcard {{post_class}} br0 bg-color fl mv2 ma2-ns w-third-ns w-100">
-         <div class="cover bg-left bg-center-l " style="background-image: url({{image}})">
+         <div class="cover bg-left bg-center-l " style="background-image: url({{img_url}})">
            <div style="background-color: rgba(0,0,0,0.65)">
             	<div class="pa2 ph3-ns pb3-ns">
                 <div class="cf w-100 mb2">
@@ -23,9 +23,9 @@
         </article>
       {{else}}
         <article class="recentcard {{post_class}} br0 card-contrast-color fl mv2 ma2-ns w-third-ns w-100">
-            {{#if image}}
+            {{#if img_url}}
               <a class="link fc-primary dim" href="{{url}}" alt="{{title}}">
-                <img class="db w-100 br2 br--top h-auto" src="{{image}}" alt="{{title}}">
+                <img class="db w-100 br2 br--top h-auto" src="{{img_url}}" alt="{{title}}">
               </a>
             {{/if}}
           	<div class="pa2 ph3-ns pb3-ns">
